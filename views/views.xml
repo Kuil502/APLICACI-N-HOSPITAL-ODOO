@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+
+      <!-- Pacientes Views -->
+      <record id="view_hospital_patient_tree" model="ir.ui.view">
+          <field name="name">hospital.patient.tree</field>
+          <field name="model">hospital.patient</field>
+          <field name="arch" type="xml">
+              <tree string="Patients">
+                  <field name="sequence"/>
+                  <field name="name"/>
+                  <field name="dni"/>
+                  <field name="state"/>
+              </tree>
+          </field>
+      </record>
+
+      <!-- Tratamientos Views -->
+      <record id="view_hospital_treatment_tree" model="ir.ui.view">
+          <field name="name">hospital.treatment.tree</field>
+          <field name="model">hospital.treatment</field>
+          <field name="arch" type="xml">
+              <tree string="Treatments">
+                  <field name="code"/>
+                  <field name="name"/>
+                  <field name="doctor"/>
+              </tree>
+          </field>
+      </record>
+
+      <!-- Menus -->
+      <menuitem id="menu_hospital_patients" name="Pacientes" parent="base.menu_main" sequence="10"/>
+      <menuitem id="menu_hospital_treatments" name="Tratamientos" parent="base.menu_main" sequence="20"/>
+
+  </data>
+</odoo>
